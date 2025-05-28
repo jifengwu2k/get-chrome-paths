@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "get-chrome-paths"
+version = "0.1.0"
+description = "A cross-platform Python utility to find Chromium-based browser executable paths on Windows, macOS, and Linux."
+readme = "README.md"
+requires-python = ">=3"
+license = "MIT"
+authors = [
+  { name="Jifeng Wu", email="jifengwu2k@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jifengwu2k/get-chrome-paths"
+"Bug Tracker" = "https://github.com/jifengwu2k/get-chrome-paths/issues"
+

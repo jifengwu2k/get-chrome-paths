@@ -1,2 +1,35 @@
-# get-chrome-paths
+# Get Chrome Paths
+
 A cross-platform Python utility to find Chromium-based browser executable paths on Windows, macOS, and Linux.
+
+## Features
+
+- Detects installed Chrome, Chromium, and Microsoft Edge browsers
+- Supports Windows (common registry path lookup), macOS (common application paths), and Linux (common installation paths)
+
+## Installation
+
+```bash
+pip install get-chrome-paths
+```
+
+## Usage
+
+```python
+from get_chrome_paths import get_chrome_paths
+
+# Get all available Chrome/Chromium-based browser paths
+paths = get_chrome_paths()
+print(paths)
+
+# Example output on Windows:
+# ['C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe']
+```
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements.
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for more information.
