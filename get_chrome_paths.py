@@ -1,6 +1,8 @@
+from __future__ import print_function
 import os
 import os.path
 import platform
+import sys
 
 
 def get_unique_elements(iterable):
@@ -24,7 +26,10 @@ def get_chrome_paths():
     chrome_paths = []
 
     if system == 'Windows':
-        import winreg
+        if sys.version_info < (3,):
+            import _winreg as winreg
+        else:
+            import winreg
 
         common_registry_paths = [
             # Google Chrome
@@ -45,7 +50,7 @@ def get_chrome_paths():
                 winreg.CloseKey(key)
                 if browser_path is not None and os.path.isfile(browser_path):
                     chrome_paths.append(browser_path)
-            except (FileNotFoundError, OSError):
+            except (IOError, OSError):
                 continue
 
     elif system == 'Darwin':
@@ -85,4 +90,5 @@ def get_chrome_paths():
 
 
 if __name__ == '__main__':
-    print(get_chrome_paths())
+    for chrome_path in get_chrome_paths():
+        print(chrome_path)

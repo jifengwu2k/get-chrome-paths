@@ -4,15 +4,16 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "get-chrome-paths"
-version = "0.1.0"
+version = "0.1.1"
 description = "A cross-platform Python utility to find Chromium-based browser executable paths on Windows, macOS, and Linux."
 readme = "README.md"
-requires-python = ">=3"
+requires-python = ">=2"
 license = "MIT"
 authors = [
   { name="Jifeng Wu", email="jifengwu2k@gmail.com" }
 ]
 classifiers = [
+    "Programming Language :: Python :: 2",
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
 ]
